@@ -36,6 +36,7 @@ RUN chmod a+x \
 FROM base As publisher
 
 LABEL maintainer="kingcc"
+LABEL "annotations": { "org.opencontainers.image.description": "DESCRIPTION" }
 LABEL org.opencontainers.image.source=https://github.com/kingcc/warproxy
 
 COPY --from=collector /bar/ /
